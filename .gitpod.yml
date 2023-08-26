@@ -3,8 +3,8 @@ tasks:
       init: python -m http.server 8000
     - name: Active ENV
       before: |
-        source WebServer/bin/active
-    - name: flask
+        source WebServer/bin/activate
+    - name: install flask and setup flask
       before: |
         pip install flask
         export FLASK_APP=server.py
