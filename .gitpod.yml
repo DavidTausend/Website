@@ -1,8 +1,8 @@
 tasks:
     - name: Start web server
-      init: python -m http.server 8000
-    - name: Export Flask
-      init: export Flask_ENV=development
+      init: 
+        python -m http.server 8000
+        pip install Flask
 
 ports:
     - port: 8000
