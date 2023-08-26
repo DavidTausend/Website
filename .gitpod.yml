@@ -1,15 +1,7 @@
-image: python:3.9
-
 tasks:
-  - name: Start Flask Web Server
-    init: |
-      source /workspace/Website/WebServer/bin/activate
-      pip install Flask
-      export FLASK_ENV=development
-      export FLASK_DEBUG=1
-    command: |
-      flask run --host=0.0.0.0
+    - name: Start web server
+      init: python -m http.server 8000
 
 ports:
-  - port: 5000
-    onOpen: open-preview
+    - port: 8000
+      onOpen: open-preview
