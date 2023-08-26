@@ -1,9 +1,12 @@
+image: python:3.9
+
 tasks:
-    - name: Start web server
-      init: 
-        python -m http.server 8000
-        pip install Flask
+  - name: Start Flask Web Server
+    init: |
+      pip install Flask
+    command: |
+      flask run --host=0.0.0.0
 
 ports:
-    - port: 8000
-      onOpen: open-preview
+  - port: 5000
+    onOpen: open-preview
