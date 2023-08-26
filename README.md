@@ -16,6 +16,8 @@ install flask:
 
 pip install flask
 
+export FLASK_APP=server.py
+
 active debugger mode:
 
 export FLASK_ENV=development

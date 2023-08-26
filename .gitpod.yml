@@ -1,11 +1,14 @@
 tasks:
     - name: Start web server
-      init: |
-        python -m http.server 8000
-        source WebServer/bin/activate
+      init: python -m http.server 8000
+    - name: Active ENV
+      before: |
+        source WebServer/bin/active
+    - name: flask
+      before: |
         pip install flask
         export FLASK_APP=server.py
-
+        
 ports:
     - port: 8000
       onOpen: open-preview
