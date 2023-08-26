@@ -8,6 +8,14 @@ https://www.gitpod.io/docs/introduction/languages/html
 
 
 
-Run bin:
+Run bin virtual env :
 
 source bin/activate
+
+
+active debugger mode:
+
+export FLASK_ENV=development
+export FLASK_DEBUG=1
+flask run
+
