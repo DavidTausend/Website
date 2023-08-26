@@ -12,6 +12,9 @@ Run bin virtual env :
 
 source bin/activate
 
+install flask:
+
+pip install flask
 
 active debugger mode:
 

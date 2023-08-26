@@ -10,3 +10,7 @@ def hello_world():
 @app.route("/blog")
 def blog():
     return "These are my thoughts on blogs"
+
+# @app.route("/favicon.ico")
+# def blog():
+#     return "These are my thoughts on blogs"
